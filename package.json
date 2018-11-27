@@ -1,0 +1,19 @@
+{
+  "name": "merge-long-picture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "babel ./libs --watch --out-dir ./",
+    "build": "babel ./libs --out-dir ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "gulp": "^3.9.1"
+  }
+}
