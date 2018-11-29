@@ -4,16 +4,28 @@
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "babel ./libs --watch --out-dir ./",
-    "build": "babel ./libs --out-dir ./"
+    "start": "nodemon ./index.js --exec babel-node",
+    "build": "babel-node ./index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
     "@babel/plugin-transform-async-to-generator": "^7.1.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
-    "gulp": "^3.9.1"
+    "canvas": "^2.1.0",
+    "colors": "^1.3.2",
+    "gulp": "^3.9.1",
+    "imagemin": "^6.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "math": "0.0.3",
+    "moment": "^2.22.2"
+  },
+  "dependencies": {
+    "async-array-methods": "^2.1.0",
+    "fs-extra": "^7.0.1",
+    "image-info": "0.0.2"
   }
 }
