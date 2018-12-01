@@ -2,30 +2,38 @@
   "name": "merge-long-picture",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.babel.js",
+  "main": "./libs/index.js",
+  "bin": {
+    "merge": "./libs/index.js"
+  },
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node",
-    "build": "babel-node ./index.js"
+    "prepublish": "npm run build",
+    "start": "babel ./src --watch --out-dir ./libs",
+    "build": "babel ./src --out-dir ./libs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/plugin-transform-async-to-generator": "^7.1.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
-    "canvas": "^2.1.0",
-    "colors": "^1.3.2",
-    "gulp": "^3.9.1",
-    "imagemin": "^6.0.0",
-    "imagemin-pngquant": "^6.0.0",
-    "math": "0.0.3",
-    "moment": "^2.22.2"
+    "@babel/runtime": "^7.1.5"
   },
   "dependencies": {
     "async-array-methods": "^2.1.0",
+    "canvas": "^2.1.0",
+    "colors": "^1.3.2",
     "fs-extra": "^7.0.1",
-    "image-info": "0.0.2"
+    "image-info": "0.0.2",
+    "imagemin": "^6.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "images": "^3.0.1",
+    "math": "0.0.3",
+    "moment": "^2.22.2",
+    "nanoid": "^2.0.0",
+    "string-hash": "^1.1.3"
   }
 }
