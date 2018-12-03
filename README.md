@@ -40,6 +40,10 @@ $ merge dir foldername
 
 # 历史更新
 
+## v1.0.2
+
+- `fixed` 修复缺少依赖项 `glob` 导致的报错
+
 ## v1.0.1
 
 - `fixed` 修改错误的包依赖项
