@@ -67,6 +67,8 @@ export default async function ({files, vertical} = {}) {
     // 在临时文件夹生成图片
     fs.writeFileSync(outFilename, pictureBuffer);
 
+    console.info(`>>> 图片合成成功`.green)
+
     console.info(`>>> 正在压缩图片`.cyan)
     await imagemin([outFilename], buildPath, {
         plugins: [imageminPngquant({
@@ -75,7 +77,7 @@ export default async function ({files, vertical} = {}) {
         })]
     })
     .catch(err => {
-        console.error(`imagemin ${err}`.red)
+        console.error(`压缩失败 ${err.toString('gb2312')}`.red)
         process.exit(0)
     })
 
